@@ -1,0 +1,42 @@
+﻿@model IEnumerable<Food__example_for_IActionResult_.Entities.Hot_meal>
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Hot_meal</title>
+    <link href="~/css/site.css" rel="stylesheet">
+    <script language="JavaScript" type="text/javascript" src="~/js/site.js"></script>
+</head>
+<body>
+
+    <br />
+
+       <ul>
+
+              @foreach (var item in Model)
+             {
+    
+              <li>
+
+                <pre>Id: @item.Id</pre>
+                <pre>Name: @item.Name</pre>
+               <img onclick="rotate(this)" src="~/images/@item.Image_path" style="width:100px; cursor:pointer" >
+
+              </li>
+
+   
+             }
+
+       </ul>
+
+       <hr>
+
+    <br />
+</body>
+</html>

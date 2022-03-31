@@ -1,0 +1,109 @@
+﻿@model Food__example_for_IActionResult_.Models.ProductlistViewModel
+
+@{
+    Layout = null;
+
+    int count=0;
+
+    string str="\n\n"+
+    "(for index -> /home/index) \n" +
+             
+    "(for Drinks -> /home/drinks) \n" +
+                
+    "(for Hot meals -> /home/hot_meal) \n" +
+               
+    "(for Fast foods -> /home/fast_food) \n";
+
+}
+
+
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+    <link href="~/css/site.css" rel="stylesheet">
+    <script language="JavaScript" type="text/javascript" src="~/js/site.js"></script>
+</head>
+<body>
+
+    <pre>
+        @str
+    </pre>
+
+     <hr>
+     <hr>
+      <br />
+
+       <ul>
+
+              @foreach (var item in Model.Drinks)
+             {
+    
+              <li>
+
+                <pre>Id: @item.Id</pre>
+                <pre>Name: @item.Name</pre>
+                <img onclick="rotate(this)" src="~/images/@item.Image_path" style="width:100px; cursor:pointer" >
+
+              </li>
+
+   
+             }
+
+       </ul>
+
+       <hr>
+
+       <br />
+   
+
+       <ul>
+
+              @foreach (var item in Model.Hot_meals)
+             {
+    
+              <li>
+
+                <pre>Id: @item.Id</pre>
+                <pre>Name: @item.Name</pre>
+               <img onclick="rotate(this)" src="~/images/@item.Image_path" style="width:100px; cursor:pointer" >
+
+              </li>
+
+   
+             }
+
+       </ul>
+
+       <hr>
+
+       
+       <br />
+
+          <ul>
+
+              @foreach (var item in Model.Fast_foods)
+             {
+    
+              <li>
+
+                <pre>Id: @item.Id</pre>
+                <pre>Name: @item.Name</pre>      
+                <img onclick="rotate(this)" src="~/images/@item.Image_path" style="width:100px; cursor:pointer" >
+
+              </li>
+
+   
+             }
+
+       </ul>
+
+       <hr>
+       
+       <br />
+
+</body>
+</html>

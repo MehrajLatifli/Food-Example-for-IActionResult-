@@ -7,17 +7,20 @@ let rotateAngle = 90;
 
 function rotate(image) {
 
+
     setTimeout(() => {
 
         image.setAttribute("style", " opacity: 0;transition: opacity 1s; width:100px; cursor:pointer");
 
     }, 500);
 
+
     setTimeout(() => {
 
         image.setAttribute("style", " opacity: 1;transition: opacity 1s; width:100px; cursor:pointer");
 
     }, 1000);
+
  
 }
 

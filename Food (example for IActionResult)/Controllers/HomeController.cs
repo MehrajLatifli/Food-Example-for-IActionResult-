@@ -10,6 +10,7 @@ namespace Food__example_for_IActionResult_.Controllers
     public class HomeController : Controller
     {
         private readonly IHostingEnvironment _env;
+
         public HomeController(IHostingEnvironment env)
         {
             this._env = env;
